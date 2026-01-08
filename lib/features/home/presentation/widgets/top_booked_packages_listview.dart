@@ -57,7 +57,8 @@ class TopBookedPackagesListView extends StatelessWidget {
     ];
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      height: 270,
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -68,7 +69,7 @@ class TopBookedPackagesListView extends StatelessWidget {
               const Text(
                 'Top Booked Health Checkup Packages',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 12,
                   fontWeight: FontWeight.bold,
                   color: Color(0xff0F0F0F),
                 ),
@@ -90,10 +91,10 @@ class TopBookedPackagesListView extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 10),
           // Horizontal ListView
           SizedBox(
-            height: 320,
+            height: 220,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: packages.length,
@@ -133,6 +134,7 @@ class _TopBookedPackageCard extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: 280,
+
         margin: const EdgeInsets.only(right: 12),
         decoration: BoxDecoration(
           color: Colors.white,
